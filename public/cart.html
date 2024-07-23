@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPShop</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+    rel="stylesheet">
+    <!-- boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- app css -->
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="container px-[80px] mx-auto mt-[120px]">
+        <div class="flex shadow-md my-10">
+            <div class="w-3/4 bg-white px-10 py-10">
+                <div class="flex justify-between border-b pb-8">
+                    <h1 class="font-semibold text-2xl">Giỏ Hàng</h1>
+                    <h2 class="font-semibold text-2xl">0 Sản Phẩm</h2>
+                </div>
+                <div class="flex mt-10 mb-5">
+                    <h3 class="font-semibold text-gray-600 text-xs uppercase w-2/5">chi tiết giỏ hàng</h3>
+                    <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Số Lượng
+                    </h3>
+                    <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Giá</h3>
+                    <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Tổng Tiền</h3>
+                </div>
+                
+                <div class="flex items-center mt-10 justify-between">
+                    <a href="./products.php" class="flex font-semibold text-red-500 text-sm">
+                    
+                        <svg class="fill-current mr-2 text-red-500 w-4" viewBox="0 0 448 512">
+                            <path
+                                d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z" />
+                        </svg>
+                        Tiếp Tục Mua Hàng
+                    </a>
+                    <div>
+                        <form action="" method="POST">
+                            <button type="submit" name="removeAll" value="removeAll" class="font-semibold hover:text-red-500 text-gray-500 text-md text-left cursor-pointer">Xóa tất cả</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <form action="" method="POST" id="summary" class="w-1/4 px-8 py-10">
+                <h1 class="font-semibold text-2xl border-b pb-8">Tổng Đơn Hàng</h1>
+                <div class="flex justify-between mt-10 mb-5">
+                    <span class="font-semibold text-sm uppercase">0 Sản phẩm</span>
+                    <span class="font-semibold text-sm">0 đ</span>
+                </div>
+                
+                <div class="border-t mt-8">
+                    <div class="flex font-semibold justify-between py-6 text-sm">
+                        <span class="uppercase">Tổng Tiền</span>
+                        <input type="hidden" name="total_price" value="0">
+                        <span>0 đ</span>
+                    </div>
+                    <button
+                        type="submit"
+                        name="checkout"
+                        value="checkout"
+                        class="bg-black font-semibold hover:bg-white hover:text-black border-2 border-black py-3 text-sm text-white uppercase rounded-lg w-full duration-300 ease-in-out"
+                    >Thanh toán</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
